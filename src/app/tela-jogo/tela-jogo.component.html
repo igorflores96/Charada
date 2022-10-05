@@ -1,0 +1,58 @@
+<body>
+
+    <header>
+        <h1>Charada do Igor!</h1>
+    </header>
+
+    <section id="tabela-chutes">
+        <table *ngFor="let linha of tabuleiro">
+            <tr id="camposLetras" *ngFor="let coluna of linha" [style.backgroundColor]="getBackgroundColor(coluna.status)"> {{coluna.letra}} </tr>
+        </table>
+    </section>
+
+    <section id="teclado">
+        <div class="containerTeclado">
+            <div class="teclado">
+                <div class="linha1">
+                    <input type="button" name="q" value="Q" (click)="escreveNaTabela('Q')"/>
+                    <input type="button" name="w" value="W" (click)="escreveNaTabela('W')"/>
+                    <input type="button" name="e" value="E" (click)="escreveNaTabela('E')"/>
+                    <input type="button" name="r" value="R" (click)="escreveNaTabela('R')"/>
+                    <input type="button" name="t" value="T" (click)="escreveNaTabela('T')"/>
+                    <input type="button" name="y" value="Y" (click)="escreveNaTabela('Y')"/>
+                    <input type="button" name="u" value="U" (click)="escreveNaTabela('U')"/>
+                    <input type="button" name="i" value="I" (click)="escreveNaTabela('I')"/>
+                    <input type="button" name="o" value="O" (click)="escreveNaTabela('O')"/>
+                    <input type="button" name="p" value="P" (click)="escreveNaTabela('P')"/>
+                </div>
+                <div class="linha2">
+                    <input type="button" name="a" value="A" (click)="escreveNaTabela('A')"/>
+                    <input type="button" name="s" value="S" (click)="escreveNaTabela('S')"/>
+                    <input type="button" name="d" value="D" (click)="escreveNaTabela('D')"/>
+                    <input type="button" name="f" value="F" (click)="escreveNaTabela('F')"/>
+                    <input type="button" name="g" value="G" (click)="escreveNaTabela('G')"/>
+                    <input type="button" name="h" value="H" (click)="escreveNaTabela('H')"/>
+                    <input type="button" name="j" value="J" (click)="escreveNaTabela('J')"/>
+                    <input type="button" name="k" value="K" (click)="escreveNaTabela('K')"/>
+                    <input type="button" name="l" value="L" (click)="escreveNaTabela('L')"/>
+                </div>  
+                <div class="linha3">
+                    <input type="button" name="z" value="Z" (click)="escreveNaTabela('Z')"/>
+                    <input type="button" name="x" value="X" (click)="escreveNaTabela('X')"/>
+                    <input type="button" name="c" value="C" (click)="escreveNaTabela('C')"/>
+                    <input type="button" name="v" value="V" (click)="escreveNaTabela('V')"/>                      
+                    <input type="button" name="b" value="B" (click)="escreveNaTabela('B')"/>
+                    <input type="button" name="n" value="N" (click)="escreveNaTabela('N')"/>
+                    <input type="button" name="m" value="M" (click)="escreveNaTabela('M')"/>
+                    <input type="button" name="Apagador" value="<=" (click)="apagaTecla()"/>    
+                    <input type="button" id="botaoEnter" value="Enter" (click)="verificaLetras()"/>    
+                </div>     
+            </div>
+        </div>
+    </section>
+
+            
+    <li *ngFor="let palavra of palavras">
+        <th>{{palavra.palavra}}</th>
+    </li>
+</body>

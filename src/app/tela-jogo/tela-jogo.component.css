@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+    
+}
+
+li {
+    list-style-type: none;
+}
+
+.teclado {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 120px;
+}
+
+.containerTeclado {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.teclado input {
+    width: 40px;
+    height: 40px;
+}
+
+.teclado input{
+    
+    background-color: #836FFF;
+    border: solid 1px #6A5ACD;
+    color: white;
+}
+
+.teclado input:hover{
+    background-color: rgba(0, 154, 243, 0.877);
+    border: solid 1px rgba(16, 141, 243, 0.877);
+    color: black;
+}
+
+
+table {
+    display: flex;
+    justify-content: center;
+}
+
+table tr {
+    
+    border: solid 1px #6A5ACD;
+    background-color: #836FFF;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18pt;
+}
+
+#botaoEnter {
+    width: 50px;
+}
